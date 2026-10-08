@@ -1,0 +1,21 @@
+{
+  "name": "ai-fullstack-project",
+  "version": "1.0.0",
+  "description": "> An AI-powered full-stack platform that helps students form balanced hackathon teams, plan their work, track requirements, and deliver a complete submission before the deadline.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ammulavivek5748-netizen/AI-FullStack-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ammulavivek5748-netizen/AI-FullStack-Project/issues"
+  },
+  "homepage": "https://github.com/ammulavivek5748-netizen/AI-FullStack-Project#readme"
+}
