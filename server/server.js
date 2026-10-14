@@ -2,6 +2,8 @@ import exp from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connect } from "mongoose";
+import { authRouter } from "./src/routes/authRoute.js";
+import { userDetailsRouter } from "./src/routes/userDetailsRoute.js";
 const app = exp();
 app.use(cors());
 dotenv.config();
@@ -23,6 +25,9 @@ async function connectToDB(){
 
 connectToDB();
 
+app.use("/auth",authRouter);
+app.use("/user",userDetailsRouter);
+
 app.use((err,req,res,next)=>{
-    res.json({success:false, message:"error: "+err.message});
+    res.json({success: false, message:"error: "+err.message});
 })
