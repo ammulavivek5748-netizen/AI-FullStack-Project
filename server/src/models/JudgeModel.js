@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 const judgeSchema = new Schema({
     id:{
         type:Schema.Types.ObjectId,
-        ref:"Accounts",
+        ref:"Account",
         required:true
     },
     userName: {

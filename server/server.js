@@ -4,11 +4,15 @@ import dotenv from "dotenv";
 import { connect } from "mongoose";
 import { authRouter } from "./src/routes/authRoute.js";
 import { userDetailsRouter } from "./src/routes/userDetailsRoute.js";
+import cookieParser from "cookie-parser";
+
+
 const app = exp();
 app.use(cors());
 dotenv.config();
 
 app.use(exp.json());
+app.use(cookieParser());
 
 async function connectToDB(){
     try{
