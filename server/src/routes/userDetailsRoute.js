@@ -1,5 +1,4 @@
 import exp from "express";
-import jwt from "jsonwebtoken";
 import { Accounts } from "../models/AccountsModel.js";
 import { Judge } from "../models/JudgeModel.js";
 import { Mentor } from "../models/MentorModel.js";
@@ -7,6 +6,7 @@ import { Organizer } from "../models/OrganizerModel.js";
 import { Student } from "../models/StudentModel.js";
 import { requireLogin } from "../middlewares/requireLogin.js";
 import { verifyRole } from "../middlewares/verifyRole.js";
+import jwt from "jsonwebtoken";
 
 
 export const userDetailsRouter = exp.Router();

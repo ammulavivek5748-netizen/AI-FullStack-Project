@@ -8,10 +8,9 @@ const eventSchema = new Schema({
         unique:true
     },
     organizerId: {
-        type:Schema.Types.ObjectId,
-        ref:"Account",
+        type:String,
         required:true,
-        unique:true
+        trim:true
     },
     theme: {
         type:String,
@@ -26,67 +25,57 @@ const eventSchema = new Schema({
     venue: {
         type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     },
     startDate: {
-        type:Date,
+        type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     }, 
-    endData: {
-        type:Date,
+    endDate: {
+        type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     }, 
     registrationStart: {
-        type:Date,
+        type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     }, 
     registrationEnd: {
-        type:Date,
+        type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     }, 
     minTeamSize: {
         type:Number,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     }, 
     maxTeamSize: {
         type:Number,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     },
     rules: {
         type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     },
     bannerImage:{
         type:String,
         required:true,
-        trim:true,
-        unique:true
+        trim:true
     },
     status:{
         type:String,
         required:true,
         enum:["published","ongoing","completed"],
-        trim:true,
-        unique:true
+        trim:true
     }
 }, {
     timestamps: true
 });
 
 
-export const EventModel = model("Event",eventSchema);
+export const Event = model("Event",eventSchema);
